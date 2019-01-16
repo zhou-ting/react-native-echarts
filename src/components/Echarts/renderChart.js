@@ -11,7 +11,7 @@ export default function renderChart(props) {
     myChart.setOption(${toString(props.option)});
     window.document.addEventListener('message', function(e) {
       var option = JSON.parse(e.data);
-      myChart.setOption(option);
+      myChart.setOption(option,true);
     });
     myChart.on('click', function(params) {
       var seen = [];
